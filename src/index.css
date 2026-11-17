@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-forest: #173F35;
+    --color-ivory: #F5EFE6;
+    --color-espresso: #1C1614;
+    --color-gold: #A88752;
+    --color-teal: #286A68;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #F5EFE6;
+    color: #1C1614;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom marquee animations */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Popping Up Animation */
+@keyframes popUp {
+  0% {
+    transform: scale(0.95) translateY(10px);
+    opacity: 0.7;
+  }
+  60% {
+    transform: scale(1.02) translateY(-2px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-pop-up {
+  animation: popUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
