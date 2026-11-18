@@ -10,7 +10,7 @@
     "start": "vite preview --port=3000 --host=0.0.0.0",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
-    "test": "tsx --test src/utils/appLogic.test.ts src/data/agencyData.test.ts"
+   "test": "tsx --test src/utils/appLogic.test.ts src/data/agencyData.test.ts src/services/api.test.ts"
   },
   "engines": {
     "node": ">=20.19.0"
